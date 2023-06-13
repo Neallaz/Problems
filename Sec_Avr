@@ -1,0 +1,27 @@
+//Write a program that receives the student number and grade point 
+average of N students from the input and displays the grade point 
+average and student number of the second student who has the highest
+grade point average.
+
+
+
+student= int(input("number of all students:"))
+d = 0
+lst_1 = []
+lst_2 = []
+while d < student:
+    d += 1
+    a = int(input("enter {}nd student number:".format(d)))
+    lst_1.append(a)
+    b = int(input("enter mark:"))
+    lst_2.append(b)
+i = 0
+for i in range(student-1):
+    if lst_2[i] > lst_2[i+1]:
+        lst_2[i], lst_2[i+1] = lst_2[i+1], lst_2[i]
+
+
+print("max number is:", lst_2[-1],
+      "for the sutdent with student number:", lst_1[-student])
+print(" second max number is:", lst_2[0],
+      "for the sutdent with sudent number:", lst_1[-student+1])

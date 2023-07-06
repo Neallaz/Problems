@@ -1,0 +1,19 @@
+//Write a program that prints the Fibonacci series up to the number taken from the input.
+
+//Example: Fibonacci series up to number 30 is as follows:
+//The Fibonacci series starts from zero or one and the next number is always the sum of the previous two numbers.
+
+//0, 1, 1, 2, 3, 5, 8, 13, 21
+
+r = int(input("enter a number:"))
+a = 0
+b = 1
+c = a+b
+// print(0, ",", 1, ",", c, ",", end="")
+print(a, b, c, sep=",", end="")
+while c < r:
+    a = b
+    b = c
+    c = a+b
+    if c < r:
+        print(c, sep=",", end="")
